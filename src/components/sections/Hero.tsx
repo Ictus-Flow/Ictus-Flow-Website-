@@ -83,7 +83,7 @@ export const Hero = () => {
             Move beyond the hype. Implement AI that builds. Ictus Flow bridges the gap between veteran construction leadership and AI innovation. Backed by 35 years of delivery experience, we help contractors protect margins, mitigate contractual risk, and optimise performance.
           </p>
           <p className="text-xl text-emerald-100/90 max-w-3xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-md">
-            We don't just automate admin; we operationalise strategy. From winning tenders to closing out complex portfolios, we combine deep commercial acumen with cutting-edge intelligence to ensure your business is built for the future.
+            We don&apos;t just automate admin; we operationalise strategy. From winning tenders to closing out complex portfolios, we combine deep commercial acumen with cutting-edge intelligence to ensure your business is built for the future.
           </p>
         </RevealOnScroll>
 

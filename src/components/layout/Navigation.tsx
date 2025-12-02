@@ -32,13 +32,13 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center opacity-40">
         <div className="flex whitespace-nowrap animate-scroll">
           <span className="text-emerald-400 text-base font-medium px-12">
-            Ictus. In music, it's the conductor's downbeat - the moment that keeps everyone in rhythm. In medicine, it's a stroke. We help with the first one so you don't have the second one.
+            Ictus. In music, it&apos;s the conductor&apos;s downbeat - the moment that keeps everyone in rhythm. In medicine, it&apos;s a stroke. We help with the first one so you don&apos;t have the second one.
           </span>
           <span className="text-emerald-400 text-base font-medium px-12">
-            Ictus. In music, it's the conductor's downbeat - the moment that keeps everyone in rhythm. In medicine, it's a stroke. We help with the first one so you don't have the second one.
+            Ictus. In music, it&apos;s the conductor&apos;s downbeat - the moment that keeps everyone in rhythm. In medicine, it&apos;s a stroke. We help with the first one so you don&apos;t have the second one.
           </span>
           <span className="text-emerald-400 text-base font-medium px-12">
-            Ictus. In music, it's the conductor's downbeat - the moment that keeps everyone in rhythm. In medicine, it's a stroke. We help with the first one so you don't have the second one.
+            Ictus. In music, it&apos;s the conductor&apos;s downbeat - the moment that keeps everyone in rhythm. In medicine, it&apos;s a stroke. We help with the first one so you don&apos;t have the second one.
           </span>
         </div>
       </div>
