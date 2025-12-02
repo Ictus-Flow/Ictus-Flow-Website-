@@ -8,9 +8,9 @@ const offerings: ServiceOffering[] = [
   {
     icon: Cpu,
     title: "Introduction to AI",
-    colorClass: "from-teal-600 to-emerald-700",
-    shadowColor: "rgba(20,184,166,0.5)",
-    borderClass: "border-teal-500/30 hover:border-teal-400/60",
+    colorClass: "from-emerald-400 to-teal-500",
+    shadowColor: "rgba(16,185,129,0.6)",
+    borderClass: "border-emerald-400/40 hover:border-emerald-300/70",
     description:
       "Demystifying artificial intelligence for your leadership and site teams. We cut through the jargon to explain what tools actually work on-site.",
     items: ["SME Briefings", "LLM Fundamentals", "Tool Selection Workshops"]
@@ -18,9 +18,9 @@ const offerings: ServiceOffering[] = [
   {
     icon: BarChart3,
     title: "AI Strategy Review",
-    colorClass: "from-emerald-600 to-green-700",
+    colorClass: "from-emerald-500 to-teal-600",
     shadowColor: "rgba(16,185,129,0.5)",
-    borderClass: "border-emerald-500/30 hover:border-emerald-400/60",
+    borderClass: "border-emerald-500/35 hover:border-emerald-400/60",
     description:
       "We audit your current workflows to identify where AI can eliminate paperwork and deliver the highest ROI.",
     items: ["Workflow Audit", "Admin Cost Analysis", "Recommendation of most efficient AI resources to suit your company"]
@@ -28,9 +28,9 @@ const offerings: ServiceOffering[] = [
   {
     icon: ShieldCheck,
     title: "AI Governance",
-    colorClass: "from-emerald-500 to-teal-700",
-    shadowColor: "rgba(16,185,129,0.5)",
-    borderClass: "border-emerald-500/30 hover:border-emerald-400/60",
+    colorClass: "from-emerald-600 to-teal-700",
+    shadowColor: "rgba(16,185,129,0.4)",
+    borderClass: "border-emerald-500/30 hover:border-emerald-400/50",
     description:
       "Ensuring your use of AI for RAMS and contracts is compliant and secure. We build frameworks that protect your liability.",
     items: ["Data Privacy", "Liability Frameworks", "Human-in-the-loop Protocols"]
@@ -38,9 +38,9 @@ const offerings: ServiceOffering[] = [
   {
     icon: Map,
     title: "AI Blueprinting",
-    colorClass: "from-purple-600 to-violet-700",
-    shadowColor: "rgba(168,85,247,0.5)",
-    borderClass: "border-purple-500/30 hover:border-purple-400/60",
+    colorClass: "from-teal-600 to-emerald-700",
+    shadowColor: "rgba(20,184,166,0.35)",
+    borderClass: "border-teal-500/25 hover:border-teal-400/45",
     description:
       "Developing the technical roadmap to integrate Voice capture and analysis tools into your existing Project Management software.",
     items: ["Tech Stack Selection", "Integration Planning", "Resource Allocation"]
@@ -48,9 +48,9 @@ const offerings: ServiceOffering[] = [
   {
     icon: Beaker,
     title: "Pilot Implementation",
-    colorClass: "from-orange-500 to-red-700",
-    shadowColor: "rgba(249,115,22,0.5)",
-    borderClass: "border-orange-500/30 hover:border-orange-400/60",
+    colorClass: "from-teal-700 to-emerald-800",
+    shadowColor: "rgba(20,184,166,0.3)",
+    borderClass: "border-teal-600/20 hover:border-teal-500/40",
     description:
       "Low-risk pilots on single sites to validate time-savings from agreed and implemented AI tools before company-wide rollout.",
     items: ["Single-Site Trial", "Agile Deployment", "Metric Validation"]
@@ -58,9 +58,9 @@ const offerings: ServiceOffering[] = [
   {
     icon: Rocket,
     title: "Full Implementation",
-    colorClass: "from-yellow-500 to-amber-700",
-    shadowColor: "rgba(245,158,11,0.5)",
-    borderClass: "border-yellow-500/30 hover:border-yellow-400/60",
+    colorClass: "from-teal-800 to-emerald-900",
+    shadowColor: "rgba(20,184,166,0.25)",
+    borderClass: "border-teal-700/15 hover:border-teal-600/35",
     description:
       "Scaling successful pilots across all projects. Training managers to use the AI tools effectively.",
     items: ["Company-wide Rollout", "Staff Training", "Support & Monitoring"]
