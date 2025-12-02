@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(nul)",
+      "Bash(dir:*)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npm install)",
+      "Bash(copy \"C:\\Ictus-flow-Website\\images\\IF Logo\\Gemini_Generated_Image_gyyje3gyyje3gyyj.png\" \"C:\\Ictus-flow-Website\\public\\images\\ictus-flow-logo.png\")",
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(exit 0)",
+      "Bash(timeout /t 2)",
+      "Bash(git init:*)",
+      "Bash(gh auth:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
