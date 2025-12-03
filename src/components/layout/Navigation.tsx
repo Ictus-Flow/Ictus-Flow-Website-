@@ -28,16 +28,16 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
           : 'bg-transparent py-6'
       }`}
     >
-      {/* Scrolling ticker background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center opacity-40">
+      {/* Scrolling ticker background - hidden on mobile */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:flex items-center opacity-40">
         <div className="flex whitespace-nowrap animate-scroll">
-          <span className="text-emerald-400 text-base font-medium px-12">
+          <span className="text-emerald-400 text-xs sm:text-sm md:text-base font-medium px-4 sm:px-8 md:px-12">
             Ictus. In music, it&apos;s the conductor&apos;s downbeat - the moment that keeps everyone in rhythm. In medicine, it&apos;s a stroke. We help with the first one so you don&apos;t have the second one.
           </span>
-          <span className="text-emerald-400 text-base font-medium px-12">
+          <span className="text-emerald-400 text-xs sm:text-sm md:text-base font-medium px-4 sm:px-8 md:px-12">
             Ictus. In music, it&apos;s the conductor&apos;s downbeat - the moment that keeps everyone in rhythm. In medicine, it&apos;s a stroke. We help with the first one so you don&apos;t have the second one.
           </span>
-          <span className="text-emerald-400 text-base font-medium px-12">
+          <span className="text-emerald-400 text-xs sm:text-sm md:text-base font-medium px-4 sm:px-8 md:px-12">
             Ictus. In music, it&apos;s the conductor&apos;s downbeat - the moment that keeps everyone in rhythm. In medicine, it&apos;s a stroke. We help with the first one so you don&apos;t have the second one.
           </span>
         </div>
@@ -56,7 +56,7 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
                 className="object-contain relative z-10"
               />
             </div>
-            <span className="text-2xl font-bold text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:via-teal-400 group-hover:to-green-400 transition-all">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:via-teal-400 group-hover:to-green-400 transition-all">
               Ictus Flow
             </span>
           </div>
@@ -102,7 +102,7 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-slate-300 hover:text-emerald-400 text-lg font-medium py-2"
+                className="block text-slate-300 hover:text-emerald-400 text-lg font-medium py-3"
               >
                 {link.name}
               </a>

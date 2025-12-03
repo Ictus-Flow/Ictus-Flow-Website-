@@ -69,7 +69,7 @@ const offerings: ServiceOffering[] = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-24 bg-slate-950 relative overflow-hidden">
+    <section id="services" className="py-12 sm:py-16 md:py-24 bg-slate-950 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -82,26 +82,26 @@ export const Services = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/95 to-slate-950"></div>
       </div>
 
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-teal-900/25 blur-[150px] rounded-full z-0"></div>
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-emerald-900/25 blur-[150px] rounded-full z-0"></div>
+      <div className="absolute top-0 right-0 w-3/4 h-3/4 sm:w-1/2 sm:h-1/2 bg-teal-900/25 blur-[100px] sm:blur-[150px] rounded-full z-0"></div>
+      <div className="absolute bottom-0 left-0 w-3/4 h-3/4 sm:w-1/2 sm:h-1/2 bg-emerald-900/25 blur-[100px] sm:blur-[150px] rounded-full z-0"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="text-center mb-16">
-            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400 font-black tracking-widest uppercase text-sm mb-3">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400 font-black tracking-widest uppercase text-xs sm:text-sm mb-2 sm:mb-3">
               OUR EXPERTISE
             </h2>
-            <h3 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white drop-shadow-lg">
               End-to-End AI Consultancy
             </h3>
-            <p className="mt-4 text-xl text-slate-300 max-w-2xl mx-auto font-light">
+            <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light">
               From the first workshop to the final site deployment, we guide your firm through the
               transition to <span className="text-white font-medium">intelligent operations</span>.
             </p>
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {offerings.map((offer, index) => (
             <RevealOnScroll key={index} className={`delay-[${index * 100}ms]`}>
               <ServiceCard {...offer} />
