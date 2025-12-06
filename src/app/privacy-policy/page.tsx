@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
                 <li>Company Name: Ictus Flow Ltd</li>
                 <li>Email: <a href="mailto:privacy@ictusflow.com" className="text-emerald-400 hover:text-emerald-300">privacy@ictusflow.com</a></li>
                 <li>Website: <a href="https://ictusflow.com" className="text-emerald-400 hover:text-emerald-300">ictusflow.com</a></li>
-                <li>ICO Registration Number: <span className="text-slate-500">[Pending Registration]</span></li>
+                <li>ICO Registration Number: ZB812435532</li>
               </ul>
             </div>
             <p className="text-slate-300 leading-relaxed">
