@@ -76,10 +76,9 @@ export const CaseStudies = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
           <div className="mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 font-black tracking-widest uppercase text-xs sm:text-sm mb-2">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 font-black tracking-widest uppercase text-xs sm:text-sm">
               CASE STUDIES
             </h2>
-            <h3 className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">Proven Impact</h3>
           </div>
         </RevealOnScroll>
 
