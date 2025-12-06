@@ -10,6 +10,7 @@ import { FounderBio } from '@/components/sections/FounderBio';
 import { About } from '@/components/sections/About';
 import { Services } from '@/components/sections/Services';
 import { ConstructionFocus } from '@/components/sections/ConstructionFocus';
+import { CaseStudies } from '@/components/sections/CaseStudies';
 import { Contact } from '@/components/sections/Contact';
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
       <About />
       <Services />
       <ConstructionFocus />
+      <CaseStudies />
       <Contact />
       <Footer />
     </div>
