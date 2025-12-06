@@ -1,4 +1,5 @@
-import { Cpu, Linkedin, Twitter, Mail } from 'lucide-react';
+import Link from 'next/link';
+import { Cpu } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,34 +20,22 @@ export const Footer = () => {
           </span>
         </div>
 
-        {/* Copyright */}
-        <div className="text-slate-500 text-xs sm:text-sm mb-4 md:mb-0 font-medium text-center">
-          &copy; {currentYear} Ictus Flow Consultancy.
+        {/* Copyright and Privacy */}
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-4 md:mb-0">
+          <div className="text-slate-500 text-xs sm:text-sm font-medium text-center">
+            &copy; {currentYear} Ictus Flow Consultancy.
+          </div>
+          <Link
+            href="/privacy-policy"
+            className="text-slate-500 hover:text-emerald-400 text-xs sm:text-sm font-medium transition-colors"
+          >
+            Privacy Policy
+          </Link>
         </div>
 
-        {/* Social Links */}
-        <div className="flex space-x-5 sm:space-x-6">
-          <a
-            href="#"
-            className="text-slate-500 hover:text-pink-400 transition-colors transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.4)] p-1"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-5 h-5 sm:w-5 sm:h-5" />
-          </a>
-          <a
-            href="#"
-            className="text-slate-500 hover:text-cyan-400 transition-colors transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.4)] p-1"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-5 h-5 sm:w-5 sm:h-5" />
-          </a>
-          <a
-            href="#"
-            className="text-slate-500 hover:text-indigo-400 transition-colors transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.4)] p-1"
-            aria-label="Email"
-          >
-            <Mail className="w-5 h-5 sm:w-5 sm:h-5" />
-          </a>
+        {/* All Rights Reserved */}
+        <div className="text-slate-500 text-xs sm:text-sm font-medium">
+          All rights reserved.
         </div>
       </div>
     </footer>

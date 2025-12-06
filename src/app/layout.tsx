@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Ictus Flow | AI Consultancy for Construction SMEs",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

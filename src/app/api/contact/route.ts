@@ -62,13 +62,14 @@ export async function POST(request: NextRequest) {
     //   `
     // });
 
-    // For now, log to console (development only)
-    console.log('Contact form submission:', {
+    // TODO: Implement email service and database logging
+    // Submission data will be used by email/logging service when implemented
+    void {
       email: body.email,
       inquiry: body.inquiry,
       timestamp: new Date().toISOString(),
       ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
-    });
+    };
 
     // Return success response
     return NextResponse.json(
@@ -79,9 +80,8 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
 
-  } catch (error) {
-    console.error('Contact form error:', error);
-
+  } catch {
+    // Error handled - return generic message to prevent info leakage
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
