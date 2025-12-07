@@ -141,6 +141,12 @@ export const Contact = () => {
                     <option className="bg-slate-950 text-slate-300" value="pilot">
                       Pilot Implementation
                     </option>
+                    <option className="bg-slate-950 text-slate-300" value="ictus-apps">
+                      Ictus Apps
+                    </option>
+                    <option className="bg-slate-950 text-slate-300" value="other">
+                      Other
+                    </option>
                   </select>
                 </div>
                 <MagneticButton

@@ -1,4 +1,4 @@
-import { HardHat, AlertTriangle, Mic, FileText, Mail, CheckSquare, FileSearch, PenTool, FileCheck, GitCompare } from 'lucide-react';
+import { HardHat, AlertTriangle, Mic, FileText, Mail, CheckSquare, FileSearch, PenTool, FileCheck, GitCompare, LayoutDashboard } from 'lucide-react';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
 
 export const ConstructionFocus = () => {
@@ -31,6 +31,20 @@ export const ConstructionFocus = () => {
         </RevealOnScroll>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+          {/* Unified Dashboard */}
+          <div className="flex flex-col items-center text-center group p-3 sm:p-4 md:p-6 rounded-xl transition-all hover:bg-white/5 border border-transparent hover:border-white/5 backdrop-blur-sm">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 overflow-hidden ring-1 ring-amber-600/50 shadow-md shadow-amber-900/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/70 to-orange-600/70 blur-md"></div>
+              <LayoutDashboard className="text-white w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 relative z-10 drop-shadow-sm" />
+            </div>
+            <h4 className="text-white font-bold text-sm sm:text-base md:text-lg group-hover:text-amber-400 transition-colors mb-1 sm:mb-2">
+              Unified Project Dashboard
+            </h4>
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Collate data from multiple apps into a single real-time view, giving contractors up-to-date project intelligence at a glance.
+            </p>
+          </div>
+
           {/* RAMS Analysis */}
           <div className="flex flex-col items-center text-center group p-3 sm:p-4 md:p-6 rounded-xl transition-all hover:bg-white/5 border border-transparent hover:border-white/5 backdrop-blur-sm">
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 overflow-hidden ring-1 ring-amber-600/50 shadow-md shadow-amber-900/20">

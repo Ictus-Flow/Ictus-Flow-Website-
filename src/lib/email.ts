@@ -11,6 +11,8 @@ const inquiryLabels: Record<string, string> = {
   strategy: 'Strategy Review',
   training: 'Training Workshop',
   pilot: 'Pilot Implementation',
+  'ictus-apps': 'Ictus Apps',
+  other: 'Other',
   general: 'General Enquiry'
 };
 

@@ -52,7 +52,7 @@ export interface CaseStudy {
  */
 export interface ContactFormData {
   email: string;
-  inquiry: 'strategy' | 'training' | 'pilot' | 'general';
+  inquiry: 'strategy' | 'training' | 'pilot' | 'ictus-apps' | 'other' | 'general';
 }
 
 /**
