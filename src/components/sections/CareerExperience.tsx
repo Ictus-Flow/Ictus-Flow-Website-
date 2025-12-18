@@ -62,7 +62,7 @@ export const CareerExperience = () => {
               Trusted by Leading Organisations
             </h3>
             <p className="text-slate-400 text-base sm:text-lg max-w-3xl mx-auto">
-              Before specialising in AI consultancy, I delivered complex construction projects for some
+              Before specialising in AI consultancy, we delivered complex construction projects for some
               of the UK&apos;s most prestigious clients across government, healthcare, corporate, and
               commercial sectors.
             </p>
@@ -73,7 +73,7 @@ export const CareerExperience = () => {
         <RevealOnScroll className="delay-100">
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] mb-8 sm:mb-12 md:mb-16">
             <h4 className="text-white font-bold text-center mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm tracking-widest uppercase text-slate-400">
-              Organisations I&apos;ve Delivered Projects For
+              Organisations We&apos;ve Delivered Projects For
             </h4>
 
             {/* Infinite Scroll Container */}

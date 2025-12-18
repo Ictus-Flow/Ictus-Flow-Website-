@@ -1,4 +1,4 @@
-import { HardHat, AlertTriangle, Mic, FileText, Mail, CheckSquare, FileSearch, PenTool, FileCheck, GitCompare, LayoutDashboard } from 'lucide-react';
+import { HardHat, AlertTriangle, Mic, FileText, Mail, CheckSquare, FileSearch, PenTool, FileCheck, GitCompare, LayoutDashboard, FileSpreadsheet, Globe } from 'lucide-react';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
 
 export const ConstructionFocus = () => {
@@ -170,10 +170,38 @@ export const ConstructionFocus = () => {
               Intelligent verification of variation claims against contract scope to prevent revenue leakage.
             </p>
           </div>
+
+          {/* Proposal Builder */}
+          <div className="flex flex-col items-center text-center group p-3 sm:p-4 md:p-6 rounded-xl transition-all hover:bg-white/5 border border-transparent hover:border-white/5 backdrop-blur-sm">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 overflow-hidden ring-1 ring-amber-600/50 shadow-md shadow-amber-900/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/70 to-orange-600/70 blur-md"></div>
+              <FileSpreadsheet className="text-white w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 relative z-10 drop-shadow-sm" />
+            </div>
+            <h4 className="text-white font-bold text-sm sm:text-base md:text-lg group-hover:text-amber-400 transition-colors mb-1 sm:mb-2">
+              Proposal Builder
+            </h4>
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Generate professional, tailored proposals quickly using AI-assisted templates and content suggestions.
+            </p>
+          </div>
+
+          {/* Website Creation */}
+          <div className="flex flex-col items-center text-center group p-3 sm:p-4 md:p-6 rounded-xl transition-all hover:bg-white/5 border border-transparent hover:border-white/5 backdrop-blur-sm">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 overflow-hidden ring-1 ring-amber-600/50 shadow-md shadow-amber-900/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/70 to-orange-600/70 blur-md"></div>
+              <Globe className="text-white w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 relative z-10 drop-shadow-sm" />
+            </div>
+            <h4 className="text-white font-bold text-sm sm:text-base md:text-lg group-hover:text-amber-400 transition-colors mb-1 sm:mb-2">
+              Website Creation
+            </h4>
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Build professional business websites with modern design, tailored to showcase your construction services.
+            </p>
+          </div>
         </div>
 
         <p className="text-amber-100/70 text-base sm:text-lg mt-8 sm:mt-10 md:mt-12 leading-relaxed font-medium max-w-4xl mx-auto text-center">
-          If you have a need for a bespoke solution to suit your business then contact me for a discovery call.
+          If you have a need for a bespoke solution to suit your business then contact us for a discovery call.
         </p>
       </div>
     </section>

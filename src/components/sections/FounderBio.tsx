@@ -54,17 +54,17 @@ export const FounderBio = () => {
           <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] mb-12">
             <div className="prose prose-invert prose-lg max-w-none">
               <p className="text-slate-200 leading-relaxed mb-6 text-lg">
-                I bridge the gap between traditional construction leadership and the future of artificial
+                We bridge the gap between traditional construction leadership and the future of artificial
                 intelligence. With over <span className="text-white font-bold">35 years of industry experience</span>—rising
-                from the tools to <span className="text-white font-bold">Construction Director</span>—I don&apos;t just
-                understand the technology; I understand the site, the contract, and the commercial reality.
+                from the tools to <span className="text-white font-bold">Construction Director</span>—we don&apos;t just
+                understand the technology; we understand the site, the contract, and the commercial reality.
               </p>
               <p className="text-slate-200 leading-relaxed text-lg">
                 Having delivered portfolios worth up to <span className="text-white font-bold">£200m</span> and
                 led complex projects for clients like the <span className="text-white font-bold">MoJ, NHS, and HSBC</span>,
-                I know the unique pressures construction firms face. I leverage this deep operational expertise to help
-                companies implement practical AI solutions that reduce risk, optimise margins, and streamline delivery. I
-                don&apos;t sell hype; I use data and digital innovation to solve the hard problems I spent over three
+                we know the unique pressures construction firms face. We leverage this deep operational expertise to help
+                companies implement practical AI solutions that reduce risk, optimise margins, and streamline delivery. We
+                don&apos;t sell hype; we use data and digital innovation to solve the hard problems we spent over three
                 decades managing.
               </p>
             </div>
