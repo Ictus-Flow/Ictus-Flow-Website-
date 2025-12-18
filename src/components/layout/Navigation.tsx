@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
-import { MagneticButton } from '../ui/MagneticButton';
 import type { NavLink } from '@/types';
 
 interface NavigationProps {
@@ -72,12 +71,6 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
                 {link.name}
               </a>
             ))}
-            <MagneticButton
-              href="#contact"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white px-6 py-2 rounded-full transition-colors font-bold text-sm backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)]"
-            >
-              Get Started
-            </MagneticButton>
           </div>
 
           {/* Mobile Menu Button */}
