@@ -201,7 +201,7 @@ export const ConstructionFocus = () => {
         </div>
 
         <p className="text-amber-100/70 text-base sm:text-lg mt-8 sm:mt-10 md:mt-12 leading-relaxed font-medium max-w-4xl mx-auto text-center">
-          If you have a need for a bespoke solution to suit your business then contact us for a discovery call.
+          If you have a need for a bespoke solution to suit your business then contact me for a discovery call.
         </p>
       </div>
     </section>

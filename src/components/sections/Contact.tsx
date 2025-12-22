@@ -130,7 +130,7 @@ export const Contact = () => {
                     className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-black/20 border border-white/10 rounded-xl text-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-white/20 transition-all appearance-none cursor-pointer group-hover:border-white/20 shadow-inner backdrop-blur-sm text-sm sm:text-base"
                   >
                     <option className="bg-slate-950 text-slate-300" value="general">
-                      We&apos;re interested in...
+                      I&apos;m interested in...
                     </option>
                     <option className="bg-slate-950 text-slate-300" value="strategy">
                       Strategy Review
