@@ -9,7 +9,10 @@ import type { FormState, ContactFormData } from '@/types';
 export const Contact = () => {
   const [formState, setFormState] = useState<FormState>('idle');
   const [formData, setFormData] = useState<ContactFormData>({
+    name: '',
     email: '',
+    phone: '',
+    company: '',
     inquiry: 'general'
   });
 
@@ -29,7 +32,7 @@ export const Contact = () => {
       if (response.ok) {
         setFormState('success');
         // Reset form data
-        setFormData({ email: '', inquiry: 'general' });
+        setFormData({ name: '', email: '', phone: '', company: '', inquiry: 'general' });
       } else {
         setFormState('error');
         setTimeout(() => setFormState('idle'), 3000);
@@ -110,11 +113,39 @@ export const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 max-w-md mx-auto">
                 <div className="group">
                   <input
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Your name"
+                    className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-black/20 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-white/20 transition-all group-hover:border-white/20 shadow-inner backdrop-blur-sm text-sm sm:text-base"
+                  />
+                </div>
+                <div className="group">
+                  <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="Enter your work email"
+                    placeholder="Work email"
+                    className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-black/20 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-white/20 transition-all group-hover:border-white/20 shadow-inner backdrop-blur-sm text-sm sm:text-base"
+                  />
+                </div>
+                <div className="group">
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    placeholder="Phone number (optional)"
+                    className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-black/20 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-white/20 transition-all group-hover:border-white/20 shadow-inner backdrop-blur-sm text-sm sm:text-base"
+                  />
+                </div>
+                <div className="group">
+                  <input
+                    type="text"
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    placeholder="Company (optional)"
                     className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-black/20 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-white/20 transition-all group-hover:border-white/20 shadow-inner backdrop-blur-sm text-sm sm:text-base"
                   />
                 </div>

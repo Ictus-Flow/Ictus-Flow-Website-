@@ -51,7 +51,10 @@ export interface CaseStudy {
  * Contact form data
  */
 export interface ContactFormData {
+  name: string;
   email: string;
+  phone: string;
+  company: string;
   inquiry: 'strategy' | 'training' | 'pilot' | 'ictus-apps' | 'other' | 'general';
 }
 

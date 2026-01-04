@@ -15,9 +15,9 @@ export async function POST(request: NextRequest) {
     const body: ContactFormData = await request.json();
 
     // Validate required fields
-    if (!body.email || !body.inquiry) {
+    if (!body.name || !body.email || !body.inquiry) {
       return NextResponse.json(
-        { error: 'Email and inquiry type are required' },
+        { error: 'Name, email and inquiry type are required' },
         { status: 400 }
       );
     }
@@ -40,11 +40,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Prepare submission data
+    // Map inquiry to readable label
+    const inquiryLabels: Record<string, string> = {
+      strategy: 'Strategy Review',
+      training: 'Training Workshop',
+      pilot: 'Pilot Implementation',
+      'ictus-apps': 'Ictus Apps',
+      other: 'Other',
+      general: 'General Enquiry'
+    };
+
+    // Prepare submission data matching Google Sheet columns
     const submissionData = {
-      email: body.email,
-      inquiry: body.inquiry,
       timestamp: new Date().toISOString(),
+      email: body.email,
+      name: body.name,
+      phone: body.phone || '',
+      company: body.company || '',
+      inquiry: inquiryLabels[body.inquiry] || body.inquiry,
+      source: 'website'
     };
 
     // Send to Google Sheets via Apps Script
