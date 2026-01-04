@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import type { ContactFormData } from '@/types';
-import { sendContactNotification } from '@/lib/email';
+
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxP8cMhHx0zaGCUmn0HFh-UxF2uMUUcdd9AjeF-qnlajD2u0fzrIZ4z8oYGrlKKO0B3/exec';
 
 /**
  * Contact form API endpoint
  * POST /api/contact
  *
- * Sends email notification via Resend when someone submits the contact form.
+ * Saves submissions to Google Sheets via Apps Script.
  */
 export async function POST(request: NextRequest) {
   try {
@@ -44,12 +45,19 @@ export async function POST(request: NextRequest) {
       email: body.email,
       inquiry: body.inquiry,
       timestamp: new Date().toISOString(),
-      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
     };
 
-    // Send email notification
-    if (process.env.RESEND_API_KEY) {
-      await sendContactNotification(submissionData);
+    // Send to Google Sheets via Apps Script
+    const response = await fetch(GOOGLE_SHEETS_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(submissionData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to save to Google Sheets');
     }
 
     // Return success response
