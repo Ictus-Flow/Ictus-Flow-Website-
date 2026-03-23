@@ -1,148 +1,87 @@
-# Ictus Flow Website - Development Standards
+# CLAUDE.md
 
-## 🚨 MANDATORY: Production-First Development
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**This applies to EVERY change, EVERY file, EVERY commit.**
+## Project Overview
 
-### Core Principle
-**NO WORKAROUNDS. NO TEMPORARY FIXES. EVERYTHING MUST WORK FIRST TIME.**
+Ictus Flow is a Next.js 14 website for an AI consultancy targeting SME construction firms. Single-page marketing site with glassmorphism UI, scroll animations, and a contact form integrated with Google Sheets.
 
----
+## Commands
 
-## Required Process for ALL Changes
+```bash
+npm run dev      # Start development server at localhost:3000
+npm run build    # Production build (run this before deploying)
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
 
-### BEFORE Writing Any Code:
+## Architecture
 
-1. **PLAN the change completely**
-   - What exactly needs to be done?
-   - Which files/components are affected?
-   - What are the dependencies?
-   - What could go wrong?
+### Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
 
-2. **DESIGN for production**
-   - No placeholders or "TODO" items that will ship
-   - No mock data in production code
-   - No hardcoded values that should be configurable
-   - Proper error handling from the start
+### Project Structure
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Homepage (client component)
+│   ├── api/contact/        # Contact form API route
+│   └── [other pages]/      # Privacy policy, case studies
+├── components/
+│   ├── layout/             # Navigation, Footer
+│   ├── sections/           # Page sections (Hero, Services, Contact, etc.)
+│   └── ui/                 # Reusable components (RevealOnScroll, MagneticButton)
+├── lib/hooks/              # Custom hooks (useTypewriter, useCounter)
+├── types/index.ts          # Shared TypeScript interfaces
+└── middleware.ts           # API rate limiting
+```
 
-3. **ASSESS the risks**
-   - Security implications?
-   - Performance impact?
-   - Breaking changes?
-   - Edge cases covered?
+### Key Patterns
 
-4. **PRESENT the plan**
-   - Explain the approach before implementing
-   - Get confirmation on architectural decisions
-   - Highlight any trade-offs or concerns
+**Path Alias**: Use `@/*` for imports from `src/` (e.g., `@/components/ui/Button`)
 
-### DURING Implementation:
+**Section Components**: Homepage sections are composed in `src/app/page.tsx`. Each section is self-contained in `src/components/sections/`.
 
-- ✅ Write production-ready code immediately
-- ✅ Handle all error cases gracefully
-- ✅ Use proper TypeScript types (no `any`)
-- ✅ Validate all inputs and sanitize outputs
-- ✅ Consider mobile/responsive design
-- ✅ Follow accessibility standards
-- ✅ Write clear, self-documenting code
+**Scroll Animations**: Wrap content with `RevealOnScroll` component for fade-in on viewport entry. Uses Intersection Observer.
 
-### FORBIDDEN Practices:
+**Contact Form Flow**:
+1. Client-side validation in `Contact.tsx`
+2. POST to `/api/contact`
+3. Rate limited via `middleware.ts` (5 requests/hour per IP)
+4. Saved to Google Sheets via Apps Script
 
-- ❌ setTimeout/setInterval to "fix" timing issues (fix the root cause)
-- ❌ Empty catch blocks
-- ❌ Hardcoded credentials or secrets
-- ❌ Disabled linting rules without justification
-- ❌ console.log in production builds
-- ❌ Commented-out code
-- ❌ Copy-paste without understanding
-- ❌ "Works on my machine" solutions
-- ❌ Placeholder text/images in production
-- ❌ Incomplete features
+**Type Definitions**: All shared types live in `src/types/index.ts` (ContactFormData, ServiceOffering, etc.)
 
-### VERIFICATION Before Completion:
+## Production-First Development
 
-- [ ] Works as intended in all scenarios
-- [ ] Handles errors gracefully
-- [ ] No console errors or warnings
-- [ ] TypeScript compiles without errors
-- [ ] No security vulnerabilities introduced
-- [ ] Performance is acceptable
-- [ ] Responsive design works
-- [ ] Code is clean and documented where needed
+**Core Principle**: No workarounds or temporary fixes. Everything must work correctly first time.
 
----
+### Before Writing Code
+1. Plan the change completely - files affected, dependencies, edge cases
+2. Design for production - no placeholders, proper error handling
+3. Assess risks - security, performance, breaking changes
 
-## Project-Specific Standards
+### Forbidden Practices
+- setTimeout/setInterval to "fix" timing issues
+- Empty catch blocks
+- `any` types
+- console.log in production code
+- Dynamic Tailwind classes like `delay-[${index * 100}ms]` (won't work in production)
 
-### React Components
-- Use functional components with hooks
-- Proper prop typing with TypeScript
-- Extract reusable logic into custom hooks
-- Keep components focused and single-purpose
+### Verification Checklist
+- TypeScript compiles without errors
+- Works on mobile and desktop
+- Handles errors gracefully
+- No console errors or warnings
 
-### State Management
-- Use appropriate state level (local, context, global)
-- Avoid prop drilling with context when needed
-- Keep state minimal and derived data computed
+## Pre-Deployment Issues
 
-### Styling
-- Use Tailwind CSS consistently
-- Follow the existing design system
-- Ensure responsive breakpoints work
-- Test on mobile and desktop
+**Critical**:
+- Contact form currently sends to Google Sheets (working) but no email notification
 
-### API Integration
-- Never hardcode API endpoints
-- Use environment variables properly
-- Handle loading, error, and success states
-- Implement proper error messages for users
-
-### Performance
-- Lazy load components where appropriate
-- Optimize images and assets
-- Minimize bundle size
-- Monitor and optimize re-renders
-
----
-
-## Decision Framework
-
-When unsure, ask:
-1. **Is this production-ready?** → If no, it's not done
-2. **Will this scale?** → If no, redesign it
-3. **Is this secure?** → If unsure, research it
-4. **Will this fail gracefully?** → If no, add error handling
-5. **Would I trust this with real customer data?** → If no, keep working
-
----
-
-## Remember
-
-**Quality > Speed. Working correctly once > Patching five times.**
-
-**Measure twice, cut once. Plan thoroughly, implement confidently, deploy without fear.**
-
----
-
-## Pre-Deployment Checklist
-
-Complete these tasks before deploying to production:
-
-### Critical (Must Fix)
-- [ ] Integrate email service (Resend/SendGrid) for contact form - submissions currently go nowhere
-- [ ] Fix Tailwind dynamic class generation - delay classes like `delay-[${index * 100}ms]` won't work in production
-
-### High Priority
-- [ ] Remove console.log statements from `src/app/api/contact/route.ts` (lines 66 & 83)
-- [ ] Verify all images exist in `/public/images/` (glass-building.png, steel-structure.png, etc.)
-
-### Medium Priority
-- [ ] Implement rate limiting on contact API (env vars defined but not enforced)
-
-### Low Priority
-- [ ] Update footer social links with real URLs (currently all `#`)
-- [ ] Consider disabling parallax/magnetic effects on touch devices
-
----
-
-_This file is automatically loaded by Claude Code for every interaction. All guidelines here are mandatory and apply to every change made to this project._
+**Known Issues**:
+- Footer social links use placeholder `#` URLs
