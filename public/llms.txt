@@ -1,0 +1,29 @@
+# Ictus Flow Ltd
+## AI Consultancy for Construction
+
+> Ictus Flow builds AI-powered tools for the UK construction industry, exclusively on Claude by Anthropic.
+
+## Products
+
+### PreconAI
+Upload a tender document. Get a full preconstruction team analysis in minutes. Six AI agents — Director, Senior Estimator, Junior Estimator, Procurement, Administrator, Bid Writer.
+URL: https://preconai.ictusflow.com
+
+### SVL (Site Voice Logger)
+Voice-first site diary for construction. Speak your daily report on the walk-round, get a formal site diary, action list, and progress summary.
+
+### Document Automation
+Automated invoice processing, correspondence drafting, and compliance tracking for SMEs and charities. Drop documents into Google Drive, AI handles the rest.
+
+### Blocker Management App
+Multi-company blocker tracking for construction projects. Field workers report, managers assign, subcontractors resolve. Full audit trail.
+
+### VividFlow
+Automated lead generation for UK trades businesses. Targeted prospect lists, automated email sequences, AI-powered replies.
+
+## About
+Founded by Gareth Kerr, Construction Director with 35+ years experience. Based in Hertfordshire, UK. Company No. 16795158.
+
+## Contact
+Email: gareth@ictusflow.com
+Website: https://www.ictusflow.com
